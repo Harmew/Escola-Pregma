@@ -1,0 +1,28 @@
+.footer {
+  background: var(--color-bg);
+  height: 160px;
+}
+
+.footer_itens {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footer_itens > p {
+  color: var(--text-white);
+  font: var(--Nunito-18-r);
+}
+
+@media (max-width: 40rem) {
+  .footer_itens {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer_itens > p {
+    font: var(--Nunito-14-r);
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Endereco {
+  cod    Int      @id @default(autoincrement())
+  rua    String   @db.VarChar(200)
+  numero Int
+  bairro String   @db.VarChar(20)
+  cidade String   @db.VarChar(20)
+  estado String   @db.VarChar(20)
+  cep    String   @db.Char(8)
+  escola Escola[]
+}
+
+model Escola {
+  cod         Int      @id @default(autoincrement())
+  nome        String   @db.VarChar(50)
+  cnpj        String   @db.Char(14)
+  endereco    Endereco @relation(fields: [enderecoCod], references: [cod], onDelete: Cascade)
+  enderecoCod Int
+}
+
+model Sala {
+  cod    Int     @id @default(autoincrement())
+  modulo Int
+  aluno  Aluno[]
+}
+
+model Disciplina {
+  cod       Int         @id @default(autoincrement())
+  nome      String      @db.VarChar(30)
+  professor Professor[]
+}
+
+model Aluno {
+  matricula  Int          @id @default(autoincrement())
+  nome       String       @db.VarChar(200)
+  cpf        String       @db.Char(11)
+  sala       Sala         @relation(fields: [salaCod], references: [cod], onDelete: Cascade)
+  salaCod    Int
+  alunoTurma AlunoTurma[]
+  boletim    Boletim[]
+}
+
+model Professor {
+  cod             Int        @id @default(autoincrement())
+  nome            String     @db.VarChar(200)
+  cpf             String     @db.Char(11)
+  tituloAcademico String     @db.VarChar(50)
+  disciplina      Disciplina @relation(fields: [disciplinaCod], references: [cod], onDelete: Cascade)
+  disciplinaCod   Int
+  turma           Turma[]
+}
+
+model Turma {
+  cod          Int          @id @default(autoincrement())
+  Professor    Professor    @relation(fields: [professorCod], references: [cod], onDelete: Cascade)
+  professorCod Int
+  alunoTurma   AlunoTurma[]
+}
+
+model AlunoTurma {
+  cod            Int   @id @default(autoincrement())
+  aluno          Aluno @relation(fields: [alunoMatricula], references: [matricula], onDelete: Cascade)
+  alunoMatricula Int
+  turma          Turma @relation(fields: [turmaCod], references: [cod], onDelete: Cascade)
+  turmaCod       Int
+}
+
+model Boletim {
+  cod            Int   @id @default(autoincrement())
+  aluno          Aluno @relation(fields: [alunoMatricula], references: [matricula], onDelete: Cascade)
+  alunoMatricula Int
+  notaFinal      Int
+}

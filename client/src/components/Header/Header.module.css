@@ -1,0 +1,20 @@
+.info_bg {
+  background-color: var(--color-primary);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+}
+
+.info p {
+  color: var(--text-white);
+  font: var(--Nunito-14-b);
+}
+
+@media (max-width: 40rem) {
+  .info p {
+    font: var(--Nunito-12-b);
+  }
+}

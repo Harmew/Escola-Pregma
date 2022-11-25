@@ -1,0 +1,47 @@
+.turma {
+  min-height: 90vh;
+}
+
+.form {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.form button {
+  display: inline-block;
+}
+
+.form button {
+  margin-left: 20px;
+}
+
+.form select {
+  min-width: 270px;
+  height: 47px;
+  border: none;
+  background-color: var(--color-white-gray);
+  color: var(--text-secondary);
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  font: var(--Nunito-14-r);
+}
+
+.form select:focus {
+  outline: none;
+  border: 2px solid var(--color-primary);
+}
+
+@media (max-width: 41em) {
+  .form select {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .form button {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-left: 0px;
+  }
+}

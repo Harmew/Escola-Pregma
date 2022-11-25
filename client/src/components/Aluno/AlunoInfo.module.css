@@ -1,0 +1,41 @@
+.card {
+  width: 260px;
+  margin: 40px auto 20px auto;
+  background-color: var(--color-white-gray);
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.card h4 {
+  font: var(--Nunito-18-r);
+  color: var(--text-bg);
+  margin-bottom: 20px;
+}
+.card p {
+  font: var(--Nunito-14-r);
+  color: var(--text-black);
+}
+
+.card p + p {
+  margin-top: 20px;
+}
+
+.aluno {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  font: var(--Nunito-14-r);
+  margin-bottom: 40px;
+}
+
+.aluno tbody {
+  background-color: var(--color-white-gray);
+}
+
+.aluno tbody td {
+  min-height: 40px;
+  height: 40px;
+  padding-left: 1em;
+}

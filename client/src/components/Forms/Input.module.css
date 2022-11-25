@@ -1,0 +1,35 @@
+.wrapper {
+  margin-bottom: 1rem;
+}
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  background: #fff;
+  color: #000;
+  min-width: 270px;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+  transition: 0.2s;
+  font: var(--Nunito-14-r);
+}
+
+.input:focus,
+.input:hover {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-primary),
+    inset 0 0 0 4px var(--color-white-gray);
+}
+
+.label {
+  display: block;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+  font: var(--Nunito-14-r);
+}
+
+.error {
+  color: #f31;
+  margin-top: 0.25rem;
+  font: var(--Nunito-14-r);
+}

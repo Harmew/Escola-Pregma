@@ -1,0 +1,104 @@
+.cursos h2 {
+  font: var(--Nunito-36-r);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.cursos .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  gap: 120px;
+  margin-bottom: 120px;
+}
+
+.cursos .cards div {
+  background: var(--color-white-gray);
+  border-radius: 5px;
+  padding: 30px 40px;
+}
+
+.cursos .cards div h3 {
+  font: var(--Nunito-24-r);
+  color: var(--text-secondary);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.cursos .cards div h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  margin: 0 auto;
+  bottom: 0px;
+  border-radius: 5px;
+  background: var(--color-secondary);
+}
+
+.cursos .cards div ul {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.cursos .cards div ul li {
+  font: var(--Nunito-18-r);
+  color: var(--text-secondary);
+}
+
+.cursos .cards div ul li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: inset 0px 0px 0px 3px var(--color-secondary);
+}
+
+.cursos .cards div p {
+  font: var(--Nunito-14-r);
+  color: var(--text-secondary);
+  margin-top: 20px;
+}
+
+@media (max-width: 80rem) {
+  .cursos .cards {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding-bottom: 90px;
+  }
+
+  .cursos .cards {
+    width: 270px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 37rem) {
+  .cursos h2 {
+    font-size: 2.25rem;
+  }
+
+  .cursos h2::after {
+    width: 30px;
+    bottom: -5px;
+  }
+}
+
+@media (max-width: 30rem) {
+  .cursos .cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cursos .cards div {
+    width: 170px;
+    margin: 0 auto;
+  }
+}

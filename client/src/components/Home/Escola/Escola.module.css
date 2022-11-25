@@ -1,0 +1,92 @@
+.escola {
+  border-bottom: 2px solid var(--color-gray);
+  margin-bottom: 60px;
+}
+
+.escola .escolaImg {
+  background: url("../../../assets/bg-home.png") no-repeat center;
+  height: 390px;
+  background-size: cover;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.escola h1 {
+  font: var(--Alice-72-r);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.escola h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 4px;
+  margin: 0 auto;
+  bottom: 0px;
+  border-radius: 5px;
+  background: var(--color-secondary);
+}
+
+.escola .itens {
+  max-width: 970px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.escola .itens .itensImg {
+  background: url("../../../assets/ipad.png") no-repeat center;
+  height: 180px;
+  width: 370px;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.escola .itens p {
+  font: var(--Nunito-18-r);
+  color: var(--text-secondary);
+}
+
+.escola .itens p + p {
+  margin-top: 20px;
+}
+
+@media (max-width: 64rem) {
+  .escola .itens {
+    grid-template-columns: 1fr;
+    align-content: center;
+  }
+
+  .escola .itens .itensImg {
+    margin: 0 auto;
+  }
+
+  .escola .itens p {
+    margin: 40px auto 0 auto;
+    margin-bottom: 40px;
+    max-width: 570px;
+    text-align: center;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 37rem) {
+  .escola h1 {
+    font-size: 2.25rem;
+  }
+  .escola h1::after {
+    width: 30px;
+    bottom: -5px;
+  }
+}
+
+@media (max-width: 30rem) {
+  .escola .itens .itensImg {
+    width: 270px;
+  }
+}

@@ -1,0 +1,104 @@
+.boletim h3 {
+  font: var(--Nunito-18-b);
+  color: var(--text-black);
+  margin-bottom: 20px;
+}
+
+.boletimMobile h3 {
+  font: var(--Nunito-18-b);
+  color: var(--text-black);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.card {
+  width: 260px;
+  margin: 20px auto;
+  background-color: var(--color-white-gray);
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.card h4 {
+  font: var(--Nunito-18-r);
+  color: var(--text-bg);
+  margin-bottom: 20px;
+}
+.card p {
+  font: var(--Nunito-14-r);
+  color: var(--text-black);
+}
+
+.card p + p {
+  margin-top: 20px;
+}
+
+.card button {
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  background-color: var(--color-bg);
+  border: none;
+  border-radius: 5px;
+  font: var(--Nunito-14-b);
+  color: var(--text-white);
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
+
+.card button:hover,
+.card button:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-bg),
+    inset 0 0 0 4px var(--color-white-gray);
+}
+
+.card button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  font: var(--Nunito-14-r);
+  table-layout: fixed;
+  margin-bottom: 60px;
+}
+.table thead {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-bg);
+  height: 30px;
+}
+
+.table thead th {
+  font: var(--Nunito-14-b);
+  color: var(--text-white);
+  padding-left: 1em;
+}
+
+.table tbody {
+  background-color: var(--color-white-gray);
+}
+
+.table tbody td {
+  border: 1px solid var(--color-bg);
+  min-height: 40px;
+  height: 40px;
+  padding-left: 1em;
+}
+
+.table tbody button {
+  border: none;
+  background: transparent;
+  font: var(--Nunito-14-r);
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
