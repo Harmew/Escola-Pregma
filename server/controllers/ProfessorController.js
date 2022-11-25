@@ -5,7 +5,7 @@ const router = express.Router();
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
-// Get All Professores //
+// Get All Professores 
 router.get("/", async (req, res) => {
   try {
     const professores = await prisma.professor.findMany();
@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Create Professor //
+// Create Professor 
 router.post("/criar", async (req, res) => {
   const { nome, cpf, tituloAcademico, disciplinaCod } = req.body;
   try {
@@ -45,7 +45,7 @@ router.post("/criar", async (req, res) => {
   }
 });
 
-// Get Disciplinas //
+// Get Disciplinas 
 router.get("/disciplina", async (req, res) => {
   try {
     const disciplinas = await prisma.disciplina.findMany();

@@ -55,7 +55,7 @@ const AlunoEditModal = ({ aluno, handleModal }) => {
   React.useEffect(() => {
     const { url, options } = GET_ALUNO_NOTA(Number(aluno));
     request(url, options);
-  }, [aluno]);
+  }, [aluno, request]);
 
   if (loading) return <Loading />;
   if (error) return <Error error={error} />;

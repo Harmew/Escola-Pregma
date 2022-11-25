@@ -5,10 +5,9 @@ const router = express.Router();
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
-// Get Alunos by Professor name //
+// Get Alunos by Professor name 
 router.get("/:cod", async (req, res) => {
   const cod = Number(req.params.cod);
-
   try {
     const alunos = await prisma.aluno.findMany({
       where: {
@@ -23,7 +22,7 @@ router.get("/:cod", async (req, res) => {
   }
 });
 
-// Get Aluno by Matricula with Boletim //
+// Get Aluno by Matricula with Boletim 
 router.get("/aluno/:cod", async (req, res) => {
   try {
     const aluno = await prisma.aluno.findUnique({
@@ -42,10 +41,9 @@ router.get("/aluno/:cod", async (req, res) => {
   }
 });
 
-// Put Aluno Boletim //
+// Put Aluno Boletim 
 router.put("/aluno/boletim", async (req, res) => {
   const { notaFinal, cod } = req.body;
-
   try {
     if (notaFinal) {
       await prisma.aluno.update({
@@ -75,7 +73,6 @@ router.put("/aluno/boletim", async (req, res) => {
 // Delete AlunoTurma with Alino and Boletim
 router.delete("/aluno/:cod", async (req, res) => {
   const cod = Number(req.params.cod);
-
   try {
     await prisma.aluno.delete({
       where: {
@@ -90,7 +87,7 @@ router.delete("/aluno/:cod", async (req, res) => {
   }
 });
 
-// Create Aluno with Boletim //
+// Create Aluno with Boletim 
 router.post("/aluno/criar", async (req, res) => {
   const { nome, cpf } = req.body;
   const salaCod = 1;

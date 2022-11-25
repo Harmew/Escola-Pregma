@@ -1,5 +1,6 @@
 export const API_URL = "http://localhost:8080";
 
+// Rostas do servidor
 export function GET_ADRESS() {
   return {
     url: API_URL + "/api/endereco",

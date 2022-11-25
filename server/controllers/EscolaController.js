@@ -5,7 +5,7 @@ const router = express.Router();
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
-// Get Adress //
+// Get Adress 
 router.get("/", async (req, res) => {
   try {
     const endereco = await prisma.endereco.findFirst({

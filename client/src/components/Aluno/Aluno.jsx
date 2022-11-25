@@ -23,7 +23,7 @@ const Aluno = () => {
   async function handleSearchSubmit(event) {
     event.preventDefault();
 
-    if (raRef.current.value == 0) return;
+    if (raRef.current.value === 0 || raRef.current.value === "0") return;
     const { url, options } = GET_ALUNO_NOTA(Number(raRef.current.value));
     request(url, options);
   }

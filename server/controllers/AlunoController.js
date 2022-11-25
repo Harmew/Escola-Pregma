@@ -5,7 +5,7 @@ const router = express.Router();
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
-// Put Aluno Turma //
+// Put Aluno Turma 
 router.put("/matricula", async (req, res) => {
   const { matricula, cod } = req.body;
 

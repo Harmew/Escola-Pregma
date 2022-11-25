@@ -2,6 +2,7 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
+// Populando a tabela o banco de dados
 async function main() {
   const Endereco = await prisma.endereco.create({
     data: {

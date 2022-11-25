@@ -19,7 +19,7 @@ const AlunoModal = ({ aluno, handleModal }) => {
           <h3>Adionar ou Editar aluno</h3>
           <div onClick={handleModal} className={styles.btn} tabIndex="1"></div>
         </div>
-        {aluno != 0 ? (
+        {aluno !== 0 ? (
           <AlunoEditModal aluno={aluno} handleModal={handleModal} />
         ) : (
           <AlunoCreateModal handleModal={handleModal} />

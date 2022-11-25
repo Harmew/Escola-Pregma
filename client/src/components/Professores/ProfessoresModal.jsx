@@ -38,7 +38,7 @@ const ProfessoresModal = ({ handleModal }) => {
       nome.validate() &&
       cpf.validate() &&
       tituloAcademico.validate() &&
-      disciplinaRef.current.value != "default"
+      disciplinaRef.current.value !== "default"
     ) {
       let cpfFormatado = cpf.value
         .replace(".", "")
